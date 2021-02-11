@@ -28,6 +28,7 @@ class Graph {
   }
 
   /** add edge between vertices v1,v2 */
+  // Question: what is the standard for directed edges?
   addEdge(v1, v2) {
     v1.adjacent.add(v2);
     v2.adjacent.add(v1);
@@ -99,6 +100,7 @@ class Graph {
   /** traverse graph with BDS and returns array of Node values */
 
   // Note: use a queue data structure; using an array for now but suboptimal
+  // TODO: use a queue class
   breadthFirstSearch(start) {
     let nodeValues = [];
     let toVisitQueue = [start];
